@@ -1,0 +1,107 @@
+/* ==== ESTILOS GENERALES ==== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ==== PORTADA (index.html) ==== */
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url("assets/portada.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #4a90e2, #6a5acd);
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ==== CUENTO (cuento.html) ==== */
+.header {
+  background: linear-gradient(45deg, #6a5acd, #4a90e2);
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.cuento-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  border-radius: 15px;
+}
+
+.capitulo {
+  margin-bottom: 40px;
+}
+
+.capitulo h2 {
+  color: #4a90e2;
+}
+
+.capitulo img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+  transition: transform 0.3s ease;
+}
+
+.capitulo img:hover {
+  transform: scale(1.02);
+}
+
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #f1f1f1;
+  color: #555;
+  margin-top: 30px;
+}
+
+/* ==== ANIMACIONES ==== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
